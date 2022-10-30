@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { Container } from './styled';
+import { Container } from './styles';
 
 export default function FormGroup({ children, error }) {
   return (

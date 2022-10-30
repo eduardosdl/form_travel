@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Label = styled.p`
   margin-bottom: 10px;
@@ -18,19 +18,27 @@ export const ContainerList = styled.ul`
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
-      width: 10px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-track {
-      background: #e0e0e0;
-      border-radius: 20px;
+    background: #e0e0e0;
+    border-radius: 20px;
   }
 
   ::-webkit-scrollbar-thumb {
-      background-color: rgb(133, 133, 133);
-      border-radius: 20px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 20px;
   }
 
+  ${({ theme, error }) => error && css`
+    color: ${theme.colors.danger.main};
+    border-color: ${theme.colors.danger.main} !important;
+
+    &::placeholder {
+      color: ${theme.colors.danger.main};
+    }
+  `}
 `;
 
 export const ItemList = styled.li`

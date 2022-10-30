@@ -9,10 +9,9 @@ export default createGlobalStyle`
   }
 
   body {
-    min-height: 100vh;
+    min-height: calc(100vh + 32px);
     background: ${({ theme }) => theme.colors.background} no-repeat;
     font-size: 16px;
-    padding-top: 32px;
     overflow-y: hidden;
   }
 

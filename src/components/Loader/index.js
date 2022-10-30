@@ -1,0 +1,12 @@
+import ReactDOM from 'react-dom';
+
+import { Overlay } from './styles';
+
+export default function Loader() {
+  return ReactDOM.createPortal(
+    <Overlay>
+      <div className="lds-dual-ring" />
+    </Overlay>,
+    document.getElementById('loader-root'),
+  );
+}
